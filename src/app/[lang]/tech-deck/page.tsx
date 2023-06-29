@@ -1,7 +1,7 @@
-export default function Home() {
+export default function TechDeck() {
   return (
     <main className="flex flex-col items-center">
-      <h1>Home</h1>
+      <h1>Tech Deck</h1>
     </main>
   );
 }
