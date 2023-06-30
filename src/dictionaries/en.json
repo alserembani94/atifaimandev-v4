@@ -10,5 +10,13 @@
   "maintenance": {
     "under_construction": "Under Construction",
     "build_pixels": "I am trying my hard to build the pixels ✨ around here.<br />I will open the section once all the pixels are here!"
+  },
+  "home": {
+    "welcome": "Salam and hello everyone!",
+    "intro": "My name is Atif Aiman",
+    "and_i": "and I am a ",
+    "pixel_perfect": "pixel-perfect frontend developer ✨",
+    "tech_deck": "Check out my tech deck!",
+    "read_blog": "Read my blog"
   }
 }

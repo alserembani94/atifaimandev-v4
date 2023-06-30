@@ -10,5 +10,13 @@
   "maintenance": {
     "under_construction": "Dalam Pembangunan",
     "build_pixels": "Saya sedang cuba menghasilkan piksel ✨ yang berkualiti.<br />Nantikan halaman yang penuh dengan kandungan menarik!"
+  },
+  "home": {
+    "welcome": "Salam and selamat sejahtera!",
+    "intro": "Nama saya Atif Aiman",
+    "and_i": "dan saya adalah ",
+    "pixel_perfect": "pembangun muka hadapan dengan piksel sempurna ✨",
+    "tech_deck": "Lihat tech deck saya!",
+    "read_blog": "Baca blog saya"
   }
 }

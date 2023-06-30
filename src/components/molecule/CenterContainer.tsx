@@ -11,7 +11,7 @@ const CenterContainer = ({
   sectionClassName,
   divClassName,
 }: CenterContainerProps) => (
-  <section className={cx([sectionClassName, "flex justify-center"])}>
+  <section className={cx([sectionClassName, "flex justify-center px-4"])}>
     <div className={cx([divClassName, "w-full max-w-screen-lg"])}>
       {children}
     </div>

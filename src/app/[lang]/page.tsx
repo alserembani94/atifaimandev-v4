@@ -1,9 +1,10 @@
 import { getDictionary } from "../../utils/get-dictionary";
 import { Locale } from "../../utils/i18n-config";
 import Image from "next/image";
-import { IoBuild } from "react-icons/io5";
+import { IoBuild, IoArrowForwardCircle } from "react-icons/io5";
 import CenterContainer from "@components/molecule/CenterContainer";
 import { featuredTech } from "../../data/tech-deck";
+import Link from "next/link";
 
 export default async function Home({
   params: { lang },
@@ -42,25 +43,40 @@ export default async function Home({
   return (
     <>
       <CenterContainer
-        sectionClassName="bg-gradient-to-b from-slate-950 via-[#070d2b] to-slate-950"
+        sectionClassName="bg-gradient-to-b from-slate-200 dark:from-slate-950 via-[#cfd8e6] dark:via-[#070d2b] to-slate-200 dark:to-slate-950"
         divClassName="grid grid-cols-3 gap-4"
       >
-        <div className="bg-slate-900 bg-opacity-30 rounded-lg border border-slate-900 backdrop-blur-md p-8 col-span-3">
-          <h6 className="-mb-2">Salam and hello everyone!</h6>
-          <h1>My name is Atif Aiman</h1>
+        <div className="bg-slate-300 dark:bg-slate-800 bg-opacity-30 rounded-lg border border-opacity-30 border-slate-400 dark:border-slate-900 backdrop-blur-md p-8 col-span-3 h-[300px] flex flex-col justify-end">
+          <h6 className="-mb-2">{dict.home.welcome}</h6>
+          <h1>{dict.home.intro}</h1>
           <h4>
-            and I am a{" "}
-            <span className="bg-slate-800 px-2 py-1 rounded-lg">
-              pixel-perfect frontend developer ✨
+            {dict.home.and_i}
+            <span className="bg-slate-400 dark:bg-slate-900 px-2 py-1 rounded-lg">
+              {dict.home.pixel_perfect}
             </span>
           </h4>
         </div>
-        <div className="bg-slate-900 bg-opacity-30 rounded-lg border border-slate-900 backdrop-blur-md p-8 col-span-2 h-[200px] flex flex-col justify-end">
+        <Link
+          href={`/${lang}/tech-deck`}
+          className="bg-slate-300 dark:bg-slate-800 bg-opacity-30 rounded-lg border border-opacity-30 border-slate-400 dark:border-slate-900 backdrop-blur-md p-8 col-span-2 h-[200px] flex flex-col justify-end group"
+        >
           <div className="flex gap-4 text-slate-500 text-2xl">
             {featuredTech.map((tool) => tool.icon)}
           </div>
-          <h3>Check out my tech deck!</h3>
-        </div>
+          <h3 className="flex items-center gap-2">
+            {dict.home.tech_deck}{" "}
+            <IoArrowForwardCircle className="text-slate-500 group-hover:text-white transition-all group-hover:translate-x-2" />
+          </h3>
+        </Link>
+        <Link
+          href={`/${lang}/blogs`}
+          className="bg-slate-300 dark:bg-slate-800 bg-opacity-30 rounded-lg border border-opacity-30 border-slate-400 dark:border-slate-900 backdrop-blur-md p-8 h-[200px] flex flex-col justify-end group"
+        >
+          <h3>
+            {dict.home.read_blog}{" "}
+            <IoArrowForwardCircle className="text-slate-500 group-hover:text-white transition-all group-hover:translate-x-2" />
+          </h3>
+        </Link>
       </CenterContainer>
     </>
   );
