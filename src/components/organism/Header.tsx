@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Dict, Locale } from "../../utils/i18n-config";
+import { Dict, Locale } from "../../../i18n-config";
 import { SiTwitter, SiLinkedin, SiGithub } from "react-icons/si";
 
 const Header = ({ dict, lang }: { dict: Dict; lang: Locale }) => {

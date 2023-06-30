@@ -2,7 +2,7 @@ import "./globals.css";
 import { Titillium_Web } from "next/font/google";
 import Header from "@components/organism/Header";
 import { getDictionary } from "../../utils/get-dictionary";
-import { i18n, Locale } from "../../utils/i18n-config";
+import { i18n, Locale } from "../../../i18n-config";
 import Footer from "@components/organism/Footer";
 
 const titillium = Titillium_Web({ weight: ["400", "700"], subsets: ["latin"] });

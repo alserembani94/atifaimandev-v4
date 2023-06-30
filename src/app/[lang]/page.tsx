@@ -1,5 +1,5 @@
 import { getDictionary } from "../../utils/get-dictionary";
-import { Locale } from "../../utils/i18n-config";
+import { Locale } from "../../../i18n-config";
 import Image from "next/image";
 import { IoBuild, IoArrowForwardCircle } from "react-icons/io5";
 import CenterContainer from "@components/molecule/CenterContainer";

@@ -1,4 +1,4 @@
-import { Dict, Locale } from "../../utils/i18n-config";
+import { Dict, Locale } from "../../../i18n-config";
 
 const Footer = ({ dict }: { dict: Dict }) => {
   return (

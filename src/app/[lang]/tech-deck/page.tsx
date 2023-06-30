@@ -1,5 +1,5 @@
 import { getDictionary } from "../../../utils/get-dictionary";
-import { Locale } from "../../../utils/i18n-config";
+import { Locale } from "../../../../i18n-config";
 import Image from "next/image";
 import { IoBuild } from "react-icons/io5";
 

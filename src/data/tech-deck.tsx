@@ -29,20 +29,33 @@ import {
   SiVuedotjs,
 } from "react-icons/si";
 
-export type ToolCategory =
-  | "frontend"
-  | "backend"
-  | "styling"
-  | "tooling"
-  | "others";
-export type ToolStatus = "checklist" | "learning" | "practicing" | "abandoned";
+export const toolCategory = [
+  "frontend",
+  "backend",
+  "fullstack",
+  "database",
+  "styling",
+  "tooling",
+  "architecture",
+  "productivity",
+  "others",
+] as const;
+export type ToolCategory = typeof toolCategory[number];
+
+export const toolStatus = [
+  "checklist",
+  "learning",
+  "practicing",
+  "abandoned",
+] as const;
+export type ToolStatus = typeof toolStatus[number];
 
 export type Tool = {
   name: string;
   featured?: boolean;
   icon: React.ReactNode;
   color?: string;
-  category?: ToolCategory;
+  category: ToolCategory;
   status: ToolStatus;
   acquiredAt: Date;
   note?: string;
@@ -55,6 +68,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2018, 8 - 1),
+    category: "frontend",
     featured: true,
   },
   {
@@ -62,6 +76,7 @@ export const techDeck: Tool[] = [
     icon: <SiReact />,
     color: "#00000000",
     status: "abandoned",
+    category: "frontend",
     acquiredAt: new Date(2018, 8 - 1),
   },
   {
@@ -70,6 +85,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2020, 8 - 1),
+    category: "fullstack",
     featured: true,
   },
   {
@@ -78,6 +94,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2019, 9 - 1),
+    category: "tooling",
     featured: true,
   },
   {
@@ -86,6 +103,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2018, 9 - 1),
+    category: "tooling",
     featured: true,
   },
   {
@@ -94,14 +112,16 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2021, 4 - 1),
+    category: "styling",
     featured: true,
   },
   {
     name: "SASS",
     icon: <SiSass />,
     color: "#00000000",
-    status: "practicing",
+    status: "abandoned",
     acquiredAt: new Date(2019, 9 - 1),
+    category: "styling",
   },
   {
     name: "Vercel",
@@ -109,6 +129,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2020, 8 - 1),
+    category: "architecture",
     featured: true,
   },
   {
@@ -117,6 +138,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2021, 8 - 1),
+    category: "frontend",
   },
   {
     name: "Nuxt.js",
@@ -124,6 +146,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2021, 9 - 1),
+    category: "frontend",
   },
   {
     name: "PostCSS",
@@ -131,6 +154,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2019, 9 - 1),
+    category: "styling",
   },
   {
     name: "Material UI",
@@ -138,13 +162,15 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "abandoned",
     acquiredAt: new Date(2020, 11 - 1),
+    category: "styling",
   },
   {
     name: "Ant Design",
     icon: <SiAntdesign />,
     color: "#00000000",
-    status: "practicing",
+    status: "abandoned",
     acquiredAt: new Date(2018, 9 - 1),
+    category: "styling",
   },
   {
     name: "Node.js",
@@ -152,13 +178,15 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2018, 8 - 1),
+    category: "tooling",
   },
   {
     name: "Express",
     icon: <SiExpress />,
     color: "#00000000",
-    status: "practicing",
+    status: "abandoned",
     acquiredAt: new Date(2018, 8 - 1),
+    category: "backend",
   },
   {
     name: "MongoDB",
@@ -166,6 +194,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "abandoned",
     acquiredAt: new Date(2018, 8 - 1),
+    category: "database",
   },
   {
     name: "Apollo GraphQL",
@@ -173,6 +202,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "abandoned",
     acquiredAt: new Date(2020, 11 - 1),
+    category: "tooling",
   },
   {
     name: "Prisma",
@@ -180,13 +210,15 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2021, 4 - 1),
+    category: "tooling",
   },
   {
     name: "NestJS",
     icon: <SiNestjs />,
     color: "#00000000",
-    status: "practicing",
+    status: "abandoned",
     acquiredAt: new Date(2021, 11 - 1),
+    category: "backend",
   },
   {
     name: "Strapi",
@@ -194,6 +226,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2019, 6 - 1),
+    category: "backend",
   },
   {
     name: "Jira",
@@ -201,6 +234,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2020, 9 - 1),
+    category: "productivity",
   },
   {
     name: "Gitlab",
@@ -208,6 +242,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2020, 9 - 1),
+    category: "tooling",
   },
   {
     name: "Figma",
@@ -215,13 +250,15 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2020, 11 - 1),
+    category: "tooling",
   },
   {
     name: "Adobe XD",
     icon: <SiAdobexd />,
     color: "#00000000",
-    status: "practicing",
+    status: "abandoned",
     acquiredAt: new Date(2018, 9 - 1),
+    category: "tooling",
   },
   {
     name: "AWS Amplify",
@@ -229,6 +266,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2020, 12 - 1),
+    category: "architecture",
   },
   {
     name: "AWS",
@@ -236,6 +274,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2020, 11 - 1),
+    category: "architecture",
   },
   {
     name: "Docker",
@@ -243,6 +282,7 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2020, 7 - 1),
+    category: "architecture",
   },
   {
     name: "Kubernetes",
@@ -250,14 +290,22 @@ export const techDeck: Tool[] = [
     color: "#00000000",
     status: "practicing",
     acquiredAt: new Date(2022, 7 - 1),
+    category: "architecture",
   },
   {
     name: "Google Cloud",
     icon: <SiGooglecloud />,
     color: "#00000000",
-    status: "practicing",
+    status: "abandoned",
     acquiredAt: new Date(2018, 8 - 1),
+    category: "architecture",
   },
 ];
 
 export const featuredTech = techDeck.filter((tool) => tool.featured);
+
+export const getToolByCategory = (category: ToolCategory) =>
+  techDeck.filter((tool) => tool.category === category);
+
+export const getTechByStatus = (status: ToolStatus) =>
+  techDeck.filter((tool) => tool.status === status);
