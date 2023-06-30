@@ -1,8 +1,14 @@
 {
   "nav": {
+    "home": "Home",
     "tech_deck": "Tech Deck",
     "experiences": "Experiences",
     "projects": "Projects",
-    "fun_stuff": "Fun Stuff"
+    "fun_stuff": "Fun Stuff",
+    "blogs": "Blogs"
+  },
+  "maintenance": {
+    "under_construction": "Under Construction",
+    "build_pixels": "I am trying my hard to build the pixels ✨ around here.<br />I will open the section once all the pixels are here!"
   }
 }

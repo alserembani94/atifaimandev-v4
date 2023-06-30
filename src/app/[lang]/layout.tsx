@@ -1,10 +1,10 @@
 import "./globals.css";
 import { Titillium_Web } from "next/font/google";
-import Header from "@components/Header";
+import Header from "@components/organism/Header";
 import { getDictionary } from "../../utils/get-dictionary";
 import { i18n, Locale } from "../../utils/i18n-config";
 
-const titillium = Titillium_Web({ weight: ["400"], subsets: ["latin"] });
+const titillium = Titillium_Web({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata = {
   title: "Atif Aiman",
@@ -28,7 +28,7 @@ export default async function RootLayout({
     <html lang={lang}>
       <body className={titillium.className}>
         <Header dict={dict} lang={lang} />
-        {children}
+        <main className="flex-1 flex flex-col">{children}</main>
       </body>
     </html>
   );

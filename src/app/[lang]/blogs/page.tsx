@@ -3,7 +3,7 @@ import { Locale } from "../../../utils/i18n-config";
 import Image from "next/image";
 import { IoBuild } from "react-icons/io5";
 
-export default async function TechDeck({
+export default async function Blogs({
   params: { lang },
 }: {
   params: { lang: Locale };
@@ -20,7 +20,7 @@ export default async function TechDeck({
           height={253}
         />
         <div className="flex flex-col gap-4 bg-slate-700 bg-opacity-30 backdrop-blur-md border border-slate-700 rounded-md p-4 max-w-lg text-center items-center">
-          <h1>{dict.nav.tech_deck}</h1>
+          <h1>{dict.nav.blogs}</h1>
           <div className="flex bg-yellow-800 px-4 py-2 rounded-lg font-bold items-center gap-2 justify-center">
             <IoBuild />
             <p>{dict.maintenance.under_construction}</p>

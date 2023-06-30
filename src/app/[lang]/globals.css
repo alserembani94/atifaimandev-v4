@@ -17,5 +17,10 @@
 html {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
+}
+
+body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

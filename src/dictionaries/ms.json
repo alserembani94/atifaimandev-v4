@@ -1,8 +1,14 @@
 {
   "nav": {
+    "home": "Halaman",
     "tech_deck": "Tech Deck",
     "experiences": "Pengalaman",
     "projects": "Projek",
-    "fun_stuff": "Sesuatu Menarik"
+    "fun_stuff": "Sesuatu Menarik",
+    "blogs": "Blog"
+  },
+  "maintenance": {
+    "under_construction": "Dalam Pembangunan",
+    "build_pixels": "Saya sedang cuba menghasilkan piksel ✨ yang berkualiti.<br />Nantikan halaman yang penuh dengan kandungan menarik!"
   }
 }
