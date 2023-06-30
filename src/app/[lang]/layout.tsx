@@ -3,6 +3,7 @@ import { Titillium_Web } from "next/font/google";
 import Header from "@components/organism/Header";
 import { getDictionary } from "../../utils/get-dictionary";
 import { i18n, Locale } from "../../utils/i18n-config";
+import Footer from "@components/organism/Footer";
 
 const titillium = Titillium_Web({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default async function RootLayout({
       <body className={titillium.className}>
         <Header dict={dict} lang={lang} />
         <main className="flex-1 flex flex-col">{children}</main>
+        <Footer dict={dict} />
       </body>
     </html>
   );

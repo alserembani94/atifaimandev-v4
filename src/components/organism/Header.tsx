@@ -5,7 +5,7 @@ import { SiTwitter, SiLinkedin, SiGithub } from "react-icons/si";
 
 const Header = ({ dict, lang }: { dict: Dict; lang: Locale }) => {
   return (
-    <header className="w-full flex justify-center px-4 sticky top-0 bg-[rgb(var(--background-rgb) / 0.5)] backdrop-blur-sm">
+    <header className="w-full flex justify-center px-4 sticky top-0 bg-[rgb(var(--background-rgb) / 0.5)] backdrop-blur-sm mb-8">
       <nav className="hidden w-full max-w-screen-lg border-b border-opacity-40 dark:border-opacity-40 border-slate-300 dark:border-slate-800 md:flex gap-4">
         <Link href={`/${lang}/`} className="flex items-center">
           <Image
